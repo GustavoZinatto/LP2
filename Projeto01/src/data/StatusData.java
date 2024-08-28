@@ -8,6 +8,11 @@ import model.StatusModel;
 
 public class StatusData extends Conexao implements CRUD {
 
+    public StatusData() throws Exception {
+        super();
+        //TODO Auto-generated constructor stub
+    }
+
     @Override
     public boolean atualizar(StatusModel obj) throws Exception {
         String sql="update tbstatus set descricao=? where id=?";

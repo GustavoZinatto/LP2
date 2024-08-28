@@ -9,7 +9,7 @@ public class App {
 
         //Declaração dos Atributos
         StatusModel obj = new StatusModel();
-        StatusData DAO = new StatusData(); //DAO - Data Acess Object
+        
         int opcao = 0;
 
         //Declaração do Scanner
@@ -18,6 +18,8 @@ public class App {
         //Menu
         do {
             try {
+                StatusData DAO = new StatusData(); //DAO - Data Acess Object
+
                 System.out.println("---MENU---");
                 System.out.println("Escolha uma opção: ");
                 System.out.println("1 - Novo Status" + 
