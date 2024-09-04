@@ -8,3 +8,5 @@ CREATE TABLE tbstatus (
     PRIMARY KEY (id)
 );
 
+select * from tbstatus
+

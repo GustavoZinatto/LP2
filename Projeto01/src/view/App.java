@@ -1,5 +1,6 @@
 package view;
 
+
 import data.StatusData;
 import model.StatusModel;
 import java.util.Scanner;
@@ -18,21 +19,22 @@ public class App {
         //Menu
         do {
             try {
-                StatusData DAO = new StatusData(); //DAO - Data Acess Object
+                StatusData DAO = new StatusData(); //DAO - Data Acess Object - Instanciação
 
                 System.out.println("---MENU---");
-                System.out.println("Escolha uma opção: ");
                 System.out.println("1 - Novo Status" + 
                 "\n2 - Pesquisar Status" +
                 "\n3 - Excluir Status" + 
                 "\n4 - Editar Status" + 
                 "\n ------SAIR------");
+
+                System.out.print("Escolha uma opção: ");
                 opcao = entrada.nextInt();
 
                 switch (opcao) {
                     case 1:
                     System.out.println("Digite a descrição: ");
-                    obj.setDescricao(entrada.nextLine());
+                    obj.setDescricao(entrada.next());
                     if (DAO.incluir(obj)) System.out.println("Salvo");
                     else System.out.println("Erro ao salvar.");
                     break;
